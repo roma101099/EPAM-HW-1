@@ -1,0 +1,22 @@
+[roma2@localhost ~]$ find /usr/share/man -type f -name "*help*"
+/usr/share/man/man1/help.1.gz
+/usr/share/man/man5/firewalld.helper.5.gz
+/usr/share/man/man8/mkhomedir_helper.8.gz
+/usr/share/man/man8/pwhistory_helper.8.gz
+/usr/share/man/man8/ssh-pkcs11-helper.8.gz
+
+[roma2@localhost ~]$ find /usr/share/man -type f -name "conf*"
+/usr/share/man/man5/config.5ssl.gz
+/usr/share/man/man5/config-util.5.gz
+
+[roma2@localhost /]$ ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+[roma2@localhost /]$ touch Roman.txt
+[roma2@localhost /]$ ls
+bin   dev  home  lib64  mnt  proc       root  sbin  sys  usr
+boot  etc  lib   media  opt  Roman.txt  run   srv   tmp  var
+[roma2@localhost /]$ find . -name "Roman.txt" -exec rm -rf '{}' \; #-exec rm -rf is used not to be prompted to confirm deletion
+[roma2@localhost /]$ ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr

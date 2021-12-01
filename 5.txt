@@ -1,0 +1,8 @@
+[roma2@localhost /]$ cd /mnt
+
+[roma2@localhost mnt]$ cd /home/roma2
+[roma2@localhost mnt]$ cd ../home/roma2
+[roma2@localhost mnt]$ cd ~
+[roma2@localhost mnt]$ cd ~roma2
+[roma2@localhost mnt]$ cd
+[roma2@localhost mnt]$ cd -
