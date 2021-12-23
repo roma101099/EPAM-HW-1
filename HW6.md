@@ -319,4 +319,15 @@ lines 1-5/5 (END)
 ## 2.3. Configure rsyslogd by adding a rule to the newly created configuration file /etc/rsyslog.d/auth-errors.conf to log all security and authentication messages with the priority alert and higher to the /var/log/auth-errors file. Test the newly added log directive with the logger command (multiple commands).
 ```bash
 
+[roma2@localhost rsyslog.d]$ sudo vi auth-errors.conf
+[roma2@localhost rsyslog.d]$ service rsyslog restart
+Redirecting to /bin/systemctl restart rsyslog.service
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Для управления системными службами и юнитами, необходимо пройти аутентификацию.
+Authenticating as: roma2
+Password:
+==== AUTHENTICATION COMPLETE ===
+[roma2@localhost rsyslog.d]$ logger -p authpriv.alert log
+[roma2@localhost rsyslog.d]$ tail -5 /var/log/auth-errors
+Dec 21 18:12:53 localhost roma2: log
 ``` 
